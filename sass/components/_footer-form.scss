@@ -20,13 +20,8 @@
 }
 
 .footer-btn {
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.06em;
-  line-height: calc(30 / 16);
-
-  display: flex;
-  align-items: center;
+  @include font(16px, 30px, 0.06em, 700);
+  @extend %align-items;
   justify-content: center;
 
   width: 200px;

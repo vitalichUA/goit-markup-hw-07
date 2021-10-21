@@ -1,6 +1,5 @@
 .primary-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  @include font(36px, 42px, 0.03em, 700);
+
   text-align: center;
 }

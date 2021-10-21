@@ -2,62 +2,62 @@
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
+.header__container {
+  @extend %align-items;
 }
 
 .logo {
   font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  @include font(26px, 31px, 0.03em, 700);
+
   color: var(--accent-color);
-}
-.logo:hover,
-.logo:focus {
-  color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .logo-second {
   color: #000000;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.logo-second:hover,
-.logo-second:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
+  @extend %align-items;
 }
 
 .header-list {
-  display: flex;
-  align-items: center;
+  @extend %align-items;
   margin-left: 93px;
   padding-left: 0px;
 }
 
 .header-list .link {
-  display: flex;
-  align-items: center;
+  @extend %align-items;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.header-item:not(:last-child) {
+.header-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+.header-list__link {
+  @include font(14px, 16px, 0.02em, 500);
+
   color: var(--primary-title-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header-list .current {
@@ -75,31 +75,26 @@
   border-radius: 2px;
 }
 
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
-}
-
-.header-contacts {
+.header__contacts {
   margin-left: auto;
 }
 
-.contacts:not(:last-child) {
+.header-list__contacts:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+.header-list__contacts-link {
+  @include font(14px, 16px, 0.02em, 500);
+
   color: var(--primary-text-color);
-}
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.contacts-icon {
+.header-list__contacts-icon {
   fill: currentColor;
   margin-right: 10px;
 }
